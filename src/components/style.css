@@ -89,3 +89,10 @@
   border-radius: 10px;
   font-size: 1em;
 }
+
+.navbar {
+  margin: auto;
+  z-index: 10;
+  background-color: #ffffff8b;
+  backdrop-filter: blur(10px);
+}

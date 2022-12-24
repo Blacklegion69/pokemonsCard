@@ -1,9 +1,10 @@
 import React from "react";
 import Card from "./components/Card.jsx";
 import Data from "./pokemons.json";
+import Navbar from "./components/Navbar.jsx";
 function App() {
   const items = [];
-  for (var x = 0; x < 500; x++) {
+  for (var x = 0; x < 10; x++) {
     items.push(
       <Card
         number={Data[x].national_number}
@@ -25,6 +26,7 @@ function App() {
   }
   return (
     <>
+      <Navbar />
       <div className="main">{items}</div>
     </>
   );
