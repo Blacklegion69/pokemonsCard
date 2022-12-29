@@ -14,20 +14,18 @@ export default function Card(props) {
   const sp_atk = props.sp_atk;
   const sp_def = props.sp_def;
   const speed = props.speed;
+
+  const notFound = "😑Nothing found😑";
   return (
     <div className="container">
       <div className="number">{number}</div>
       <div className="images">
         <div className="dual">
-          <img className="normal" src={normal} alt="its a normal image" />
-          <img
-            className="gif"
-            src={animated}
-            alt="its a normal animated image"
-          />
+          <img className="normal" src={normal} alt={notFound} />
+          <img className="gif" src={animated} alt={notFound} />
         </div>
         <div className="largeimage">
-          <img className="large" src={large} alt="its a large image" />
+          <img className="large" src={large} alt={notFound} />
         </div>
       </div>
       <div className="information">
