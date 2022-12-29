@@ -2,34 +2,34 @@ import React from "react";
 import Card from "./components/Card.jsx";
 import Data from "./pokemons.json";
 import Navbar from "./components/Navbar.jsx";
-function App() {
-  const items = [];
-  for (var x = 0; x < 10; x++) {
-    items.push(
+
+const App = () => {
+  const items = Data.map((item) => {
+    return (
       <Card
-        number={Data[x].national_number}
-        normal={Data[x].sprites.normal}
-        animated={Data[x].sprites.animated}
-        large={Data[x].sprites.large}
-        evolution={Data[x].evolution}
-        name={Data[x].name}
-        type={Data[x].type}
-        total={Data[x].total}
-        hp={Data[x].hp}
-        attack={Data[x].attack}
-        defense={Data[x].defense}
-        sp_atk={Data[x].sp_atk}
-        sp_def={Data[x].sp_def}
-        speed={Data[x].speed}
+        number={item.national_number}
+        normal={item.sprites.normal}
+        animated={item.sprites.animated}
+        large={item.sprites.large}
+        evolution={item.evolution}
+        name={item.name}
+        type={item.type}
+        total={item.total}
+        hp={item.hp}
+        attack={item.attack}
+        defense={item.defense}
+        sp_atk={item.sp_atk}
+        sp_def={item.sp_def}
+        speed={item.speed}
       />
     );
-  }
+  });
   return (
     <>
       <Navbar />
-      <div className="main">{items}</div>
+      {items}
     </>
   );
-}
+};
 
 export default App;
